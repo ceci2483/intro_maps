@@ -27,20 +27,65 @@
 	<div id="map"></div>
 	<script>
 		function initMap() {
-			var myLatLng = {
+			var kbh = {
 				lat: 55.642332,
 				lng: 12.536498
 			};
 
+			var solrod = {
+				lat: 55.535234,
+				lng: 12.212605
+			};
+
+			var farum = {
+				lat: 55.812053,
+				lng: 12.373213
+			};
+
+			var gravervænget = {
+				lat: 55.710680,
+				lng: 12.527691
+			};
+
+			var gudhjem = {
+				lat: 55.157751,
+				lng: 14.958063
+			};
+
+
 			var map = new google.maps.Map(document.getElementById('map'), {
 				zoom: 10,
-				center: myLatLng
+				center: gravervænget
 			});
 
 			var marker = new google.maps.Marker({
-				position: myLatLng,
+				position: solrod,
+				map: map,
+				title: 'Velkommen til Solrød'
+			});
+
+			var marker = new google.maps.Marker({
+				position: farum,
+				map: map,
+				title: 'Velkommen til Farum'
+			});
+
+			var marker = new google.maps.Marker({
+				position: gravervænget,
+				map: map,
+				title: 'Velkommen til hjem'
+			});
+
+			var marker = new google.maps.Marker({
+				position: kbh,
 				map: map,
 				title: 'Velkommen til København'
+			});
+
+			var marker = new google.maps.Marker({
+				position: gudhjem,
+				map: map,
+				title: 'Velkommen til Gudhjem'
 			});
 		}
 	</script>
